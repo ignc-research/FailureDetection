@@ -1,0 +1,15 @@
+.green {
+    border: solid greenyellow 5px
+}
+.red {
+    border: solid red 5px
+}
+
+#left, #right {
+    display: inline-block;
+    margin: 10px
+}
+
+#align {
+    border: solid green 5px
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Object Detection API</title>
+
+    <style>
+      .green {border: solid greenyellow 5px}
+      ._delete_red {border: solid red 5px}
+      #align {border: solid green 5px}
+      #photo {
+        max-width: 100%;
+      }
+    </style>
+
+    <script>
+      function WaitDisplay() {
+        target = document.getElementById("result");
+        target.style.display = "none";
+        target = document.getElementById("loading");
+        target.style.display = "";
+        setTimeout(function () {
+          document.getElementById("upload").submit();
+        }, 100);
+      }
+    </script>
+
+  </head>
+
+  <body>
+
+    {% from "formhelpers.html" import render_field %}
+
+    <h1>Failure Detection API</h1>
+    <h3>Upload a thermal image file.</h3>
+
+    <div>
+      <form id="upload" method=post action={{ url_for('post') }} enctype="multipart/form-data">
+        {{ render_field(photo_form.input_photo) }}
+        
+        <p><input type="button" onclick="WaitDisplay();" value="Upload"></p>
+      </form>
+    </div>
+
+    <hr>
+
+    <div id="result">
+      {% if result|length > 0 %}
+        <img class="{{ color }}" id="photo" src="{{ result }}" />
+      {% endif %}
+    </div>
+    <div id="loading" style="display:none">
+      <h2>Detecting failure...</h2>
+    </div>
+
+  </body>
+
+</html>

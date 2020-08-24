@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Home | Failure Detector</title>
+    <link rel="stylesheet" type="text/css" media="all"
+        href="static/rw_common/themes/Future/consolidated.css?rwcache=600564554" />
+
+    <script>
+        function refresh(node) {
+            var times = 3000; // gap in Milli Seconds;
+
+            (function startRefresh() {
+                var address;
+                if(node.src.indexOf('?')>-1)
+                    address = node.src.split('?')[0];
+                else
+                    address = node.src;
+                node.src = address+"?time="+new Date().getTime();
+
+                setTimeout(startRefresh,times);
+            })();
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <header class="hero" id="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <h1 class="hero-title">
+            Failure Detector
+            <em>For Thermal Images</em>
+        </h1>
+    </header>
+
+    <div class="content">
+        <section class="main" style="position: relative;">
+            <div class="container">
+                <img id="0" src="static/images/0.png" />
+                <img id="1" src="static/images/1.png" />
+                <img id="2" src="static/images/2.png" />
+                <img id="3" src="static/images/3.png" />
+                <img id="4" src="static/images/4.png" />
+        </section>
+    </div>
+    <script type="text/javascript" src="static/rw_common/themes/Future/js/main.js?rwcache=600564554"></script>
+    <script>
+        function refresh(node) {
+            var times = 300; // gap in Milli Seconds;
+
+            (function startRefresh() {
+                var address;
+                if(node.src.indexOf('?')>-1)
+                    address = node.src.split('?')[0];
+                else
+                    address = node.src;
+                node.src = address+"?time="+new Date().getTime();
+
+                setTimeout(startRefresh,times);
+            })();
+
+        }
+        window.onload = function() {
+            var node0 = document.getElementById('0');
+            var node1 = document.getElementById('1');
+            var node2 = document.getElementById('2');
+            var node3 = document.getElementById('3');
+            var node4 = document.getElementById('4');
+            refresh(node0);
+            refresh(node1);
+            refresh(node2);
+            refresh(node3);
+            refresh(node4);
+        }
+    </script>
+</body>
+
+</html>
