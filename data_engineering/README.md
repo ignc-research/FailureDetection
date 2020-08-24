@@ -2,7 +2,7 @@
 
 Find dataset in Server 46: /home/xueliang/dataset/BAM_new_added_24.08
 
-<img src="../../../../Desktop/Screenshot%202020-08-24%20at%2013.49.01.png" alt="Screenshot 2020-08-24 at 13.49.01" style="zoom:40%;" />
+<img src="README.assets/Screenshot%202020-08-24%20at%2013.49.01-8270427.png" alt="Screenshot 2020-08-24 at 13.49.01" style="zoom:40%;" />
 
 ## Original Images
 
@@ -17,9 +17,7 @@ Extracted with Matlab from raw '.mat' files. Refer to the 'matlab_scripts' folde
 3. Specifically, all images from same one film have same quality label.
 4. Each image has only one target/label.
 
-```
-- [ ] add labeling img
-```
+<img src="README.assets/Screenshot%202020-08-24%20at%2019.59.57.png" alt="Screenshot 2020-08-24 at 19.59.57" style="zoom:33%;" />
 
 
 
